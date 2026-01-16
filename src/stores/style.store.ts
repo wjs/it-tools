@@ -11,6 +11,10 @@ export const useStyleStore = defineStore('style', {
 
     watch(isSmallScreen, v => (isMenuCollapsed.value = v));
 
+    if (isDarkTheme.value) {
+      toggleDark();
+    }
+
     return {
       isDarkTheme,
       toggleDark,
